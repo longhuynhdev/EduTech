@@ -226,7 +226,7 @@
                                         @if (User != null && (await AuthorizationService.AuthorizeAsync(User, "IsLecturer")).Succeeded)
                                         {
                                             var lecturer = await UserManager.GetUserAsync(User);
-                                            if (item.Lecturers.Any(l => l.Id == lecturer.Id))
+                                            if (item.Lecturers.Any(l => l.Id == lecturer?.Id))
                                             {
                                                 <form method="post" action="@Url.Action("CancelTeaching", "Class")" class="d-inline">
                                                     @Html.AntiForgeryToken()
@@ -251,7 +251,7 @@
                                         @if (User != null && (await AuthorizationService.AuthorizeAsync(User, "IsStudent")).Succeeded)
                                         {
                                             var student = await UserManager.GetUserAsync(User);
-                                            if (item.Students.Any(s => s.Id == student.Id))
+                                            if (item.Students.Any(s => s.Id == student?.Id))
                                             {
                                                 <form method="post" action="@Url.Action("CancelEnrollment", "Class")" class="d-inline">
                                                     @Html.AntiForgeryToken()

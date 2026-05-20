@@ -19,17 +19,17 @@
             <div class="card-body">
                 <div class="row">
                     <div class="col-md-6">
-                        <p><strong>Tên lớp:</strong> @class_info.Course.Name</p>
-                        <p><strong>Lên môn học:</strong> @class_info.Name</p>
-                        <p><strong>Giảng viên:</strong> @foreach (var lecturer in class_info.Lecturers)
+                        <p><strong>Tên lớp:</strong> @class_info?.Course?.Name</p>
+                        <p><strong>Lên môn học:</strong> @class_info?.Name</p>
+                        <p><strong>Giảng viên:</strong> @foreach (var lecturer in class_info?.Lecturers ?? [])
                             {
                                 <span>@lecturer.Name</span>
                             }
                         </p>
                     </div>
                     <div class="col-md-6">
-                        <p><strong>Ngày bắt đầu:</strong> @class_info.StartDate</p>
-                        <p><strong>Ngày kết thúc:</strong> @class_info.EndDate</p>
+                        <p><strong>Ngày bắt đầu:</strong> @class_info?.StartDate</p>
+                        <p><strong>Ngày kết thúc:</strong> @class_info?.EndDate</p>
                     </div>
                 </div>
             </div>

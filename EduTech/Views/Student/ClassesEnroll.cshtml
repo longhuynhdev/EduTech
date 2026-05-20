@@ -116,7 +116,7 @@
 
 @{
     // Combine all ScheduleData from the model into one list
-    var scheduleData = Model.SelectMany(c => c.ScheduleData).ToList();
+    var scheduleData = (Model ?? []).SelectMany(c => c.ScheduleData ?? []).ToList();
 }
 <div>
 

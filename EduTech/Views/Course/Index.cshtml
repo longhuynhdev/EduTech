@@ -58,7 +58,7 @@
                                     <p>@course.Description</p>
                                 </td>
                                 <td class="align-middle px-4">
-                                    @if ((await AuthorizationService.AuthorizeAsync(User, "CanManageCourses")).Succeeded)
+                                    @if ((await AuthorizationService.AuthorizeAsync(User!, "CanManageCourses")).Succeeded)
                                     {
                                         <div class="btn-group">
                                             <a class="btn btn-sm btn-outline-primary me-1"

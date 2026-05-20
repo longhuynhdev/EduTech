@@ -25,16 +25,16 @@
             </div>
             <dl class="row">
                 <dt class="col-sm-3">Tên lớp học</dt>
-                <dd class="col-sm-9">@Model.Class.Name</dd>
+                <dd class="col-sm-9">@Model.Class?.Name</dd>
 
                 <dt class="col-sm-3">Tên môn học</dt>
-                <dd class="col-sm-9">@Model.Class.Course.Name</dd>
+                <dd class="col-sm-9">@Model.Class?.Course?.Name</dd>
 
                 <dt class="col-sm-3">Học viên</dt>
-                <dd class="col-sm-9">@Model.Student.Name</dd>
+                <dd class="col-sm-9">@Model.Student?.Name</dd>
 
                 <dt class="col-sm-3">Email học viên</dt>
-                <dd class="col-sm-9">@Model.Student.Email</dd>
+                <dd class="col-sm-9">@Model.Student?.Email</dd>
 
                 <dt class="col-sm-3">Số tiền</dt>
                 <dd class="col-sm-9">@Model.Amount.ToString("C0", new System.Globalization.CultureInfo("vi-VN"))</dd>

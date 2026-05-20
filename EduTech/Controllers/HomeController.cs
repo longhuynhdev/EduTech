@@ -32,6 +32,7 @@ namespace EduTech.Controllers
             {
                 RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier,
                 StatusCode = statusCode ?? 500,
+                RequestMethod = HttpContext.Request.Method,
                 Message = statusCode switch
                 {
                     400 => "Bad Request",

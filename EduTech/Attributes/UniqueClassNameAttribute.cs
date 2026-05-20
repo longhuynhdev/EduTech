@@ -4,9 +4,10 @@ namespace EduTech.Attributes;
 
 public class UniqueClassNameAttribute : ValidationAttribute
 {
-    protected override ValidationResult IsValid(object value, ValidationContext validationContext)
+    protected override ValidationResult? IsValid(object? value, ValidationContext validationContext)
     {
-        var dbContext = (EduTechDbContext)validationContext.GetService(typeof(EduTechDbContext));
+        var dbContext = validationContext.GetService(typeof(EduTechDbContext)) as EduTechDbContext;
+        if (dbContext == null) return null;
         var className = value as string;
         var classId = (int?)validationContext.ObjectType.GetProperty("Id")?.GetValue(validationContext.ObjectInstance, null);
 

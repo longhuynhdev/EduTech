@@ -44,7 +44,7 @@ namespace EduTech.Controllers
 
             var course = new Course
             {
-                Name = viewModel.Name, 
+                Name = viewModel.Name!,
                 Description = viewModel.Description
             };
 

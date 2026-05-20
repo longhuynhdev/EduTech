@@ -1,0 +1,20 @@
+From: EduTech <noreply@edutech.com>
+Date: Wed, 20 May 2026 15:07:03 +0700
+Subject: Confirm your email
+Message-Id: <0GEY8ZU9BTU4.J172YI8FJATM@m4.local>
+Sender: EduTech <noreply@edutech.com>
+To: longhuynhdev@gmail.com
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+
+<div style='font-family: Arial, sans-serif; font-size: 16px; color: #333; line-height: 1.5;'>
+                            <p>Dear User,</p>
+                            <p>Cảm ơn bạn đã đăng ký với chúng tôi! Vui lòng xác nhận tài khoản của bạn bằng cách nhấp vào nút bên dưới:</p>
+                            <p style='text-align: center; margin: 20px 0;'>
+                                <a href='https://localhost:7077/Identity/Account/ConfirmEmail?userId=228ee8b9-2c79-4f5c-84b5-b569696189a7&amp;code=Q2ZESjhEVGZOVjBGb0ZkS3Y5SGltS2s5MlppUnNkcDQ1RFVjZGFsczBabGQwK295YTJ6SmE3T1VINWFQWnQ2dGZTWTJEK2MyVG5IYjJ2Sm1zcUk4NzhkWENnRWpuc1E4bit5aHhMc1BPZTlUKzdWbFYzWERqSnhJY3ozVnNFK2Y5eEtzOTA1dnB1QkJDeXNoOFV3WEFJekp3bnVPOUZMZEZUajJiYU84Wm1HNXFsWWFjV2hpZ3hqRndSR1pNMTZoL2dBaGhkeEVRdmU3MHB1dEUyUlZOalZYMW1US2tCQXR3dThrZXZjbmRYOXNlSlJGN0YwVzQ0cVAvWXZlc3VSQ254RU5pUT09&amp;returnUrl=%2F' 
+                                   style='background-color: #007bff; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;'>
+                                   Xác nhận địa chỉ email
+                                </a>
+                            </p>
+                            <p>Nếu bạn không đăng ký tài khoản này, vui lòng bỏ qua email này.</p>
+                        </div>

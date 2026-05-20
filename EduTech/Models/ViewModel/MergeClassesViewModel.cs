@@ -6,5 +6,5 @@ public class MergeClassesViewModel
 {
     public int ClassAId { get; set; }
     public int ClassBId { get; set; }
-    public List<SelectListItem> Classes { get; set; }
+    public List<SelectListItem> Classes { get; set; } = new();
 }

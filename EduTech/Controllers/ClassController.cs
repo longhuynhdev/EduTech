@@ -114,7 +114,7 @@ namespace EduTech.Controllers
                     Tuition = viewModel.Tuition,
                     // Course
                     CourseId = viewModel.CourseId,
-                    Course = null, //Don't touch this line please
+                    Course = null!, //Don't touch this line please
                     // ClassSchedules
                     ClassSchedules = viewModel.ClassSchedules.Select(s => new ClassSchedule
                     {
@@ -893,7 +893,7 @@ namespace EduTech.Controllers
         {
             var invoice = await _context.Invoices
                 .Include(i => i.Class)
-                .ThenInclude(c => c.Course)
+                .ThenInclude(c => c!.Course)
                 .Include(i => i.Student)
                 .FirstOrDefaultAsync(i => i.Id == id);
 

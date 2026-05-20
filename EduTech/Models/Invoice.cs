@@ -9,11 +9,11 @@ public class Invoice
 
     [Required]
     public int ClassId { get; set; }
-    public Class Class { get; set; }
+    public Class? Class { get; set; }
 
     [Required]
-    public string StudentId { get; set; } 
-    public ApplicationUser Student { get; set; }
+    public required string StudentId { get; set; }
+    public ApplicationUser? Student { get; set; }
 
     [Required]
     public double Amount { get; set; }

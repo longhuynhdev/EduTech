@@ -276,13 +276,13 @@ namespace EduTech.Controllers
 
             var studentGrades = await _context.StudentGrades
                 .Include(sg => sg.Class)
-                .ThenInclude(c => c.Course)
+                .ThenInclude(c => c!.Course)
                 .Where(sg => sg.StudentId == student.Id)
                 .ToListAsync();
 
             var viewModel = new ExamResultsViewModel
             {
-                StudentName = student.Name,
+                StudentName = student.Name ?? string.Empty,
                 Grades = studentGrades
             };
 

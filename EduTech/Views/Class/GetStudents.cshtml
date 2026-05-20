@@ -39,8 +39,8 @@
                                 
                                 <tr>
                                     <td>@(++i)</td>
-                                <td>@invoice.Student.Name</td>
-                                <td>@invoice.Student.Email</td>
+                                <td>@invoice.Student?.Name</td>
+                                <td>@invoice.Student?.Email</td>
                                 <td>@invoice.Amount.ToString("C0", new System.Globalization.CultureInfo("vi-VN")) </td>
                                 <td>@(invoice.Status == InvoiceStatus.Unpaid ? "Chưa thanh toán" : "Đã thanh toán")  </td>
                                     <td>

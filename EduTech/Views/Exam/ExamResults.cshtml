@@ -69,8 +69,8 @@
                                 @foreach (var grade in Model.Grades)
                                 {
                                     <tr>
-                                        <td class="fw-medium">@grade.Class.Name</td>
-                                        <td class="fw-medium">@grade.Class.Course.Name</td>
+                                        <td class="fw-medium">@grade.Class?.Name</td>
+                                        <td class="fw-medium">@grade.Class?.Course?.Name</td>
                                         <td>@(grade.AssignmentType == AssignmentType.Practice ? "Thực hành" : grade.AssignmentType == AssignmentType.Theory ? "Lý thuyết" : grade.AssignmentType)</td>
                                         <td>@grade.Score</td>
                                         <td>@grade.Comments</td>

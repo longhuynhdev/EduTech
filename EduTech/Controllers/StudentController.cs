@@ -248,9 +248,9 @@ namespace EduTech.Controllers
 
             var studentGrades = await _context.StudentGrades
                 .Include(sg => sg.Class)
-                    .ThenInclude(c => c.Course)
+                    .ThenInclude(c => c!.Course)
                 .Include(sg => sg.Class)
-                    .ThenInclude(c => c.Lecturers)
+                    .ThenInclude(c => c!.Lecturers)
                 .Where(sg => sg.ClassId == classId && sg.StudentId == student.Id)
                 .ToListAsync();
 
@@ -271,9 +271,9 @@ namespace EduTech.Controllers
 
             var studentGrades = await _context.StudentGrades
                 .Include(sg => sg.Class)
-                .ThenInclude(c => c.Course)
+                .ThenInclude(c => c!.Course)
                 .Include(sg => sg.Class)
-                .ThenInclude(c => c.Lecturers)
+                .ThenInclude(c => c!.Lecturers)
                 .Where(sg => sg.StudentId == student.Id)
                 .ToListAsync();
 
@@ -314,7 +314,7 @@ namespace EduTech.Controllers
 
             var invoices = await _context.Invoices
                 .Include(i => i.Class)
-                .ThenInclude(c => c.Course)
+                .ThenInclude(c => c!.Course)
                 .Where(i => i.StudentId == student.Id)
                 .ToListAsync();
 
@@ -346,7 +346,7 @@ namespace EduTech.Controllers
         {
             var invoice = await _context.Invoices
                 .Include(i => i.Class)
-                .ThenInclude(c => c.Course)
+                .ThenInclude(c => c!.Course)
                 .Include(i => i.Student)
                 .FirstOrDefaultAsync(i => i.Id == id);
 
